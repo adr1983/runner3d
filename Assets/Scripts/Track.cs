@@ -51,20 +51,34 @@ public class Track : MonoBehaviour
                 newObstacles[i].GetComponent<ChangeLane>().PositionLane();
         }
     }
-
+    
     void PositionateCoins()
+    {
+        for (int i = 0; i < newCoins.Count; i++)
+        {
+            float posZMin = (500f / newCoins.Count) + (500f / newCoins.Count) * i;
+            float posZMax = (500f / newCoins.Count) + (500f / newCoins.Count) * i + 1;
+            newCoins[i].transform.localPosition = new Vector3(0, 1, Random.Range(posZMin, posZMax));
+            newCoins[i].SetActive(true);
+            if (newCoins[i].GetComponent<ChangeLane>() != null)
+                newCoins[i].GetComponent<ChangeLane>().PositionLane();
+        }
+    }
+    
+
+    /*void PositionateCoins()
     {
         float minZPos = 10f;
         for (int i = 0; i < newCoins.Count; i++)
         {
-            float maxZPos = minZPos + 5f;
+            float maxZPos = minZPos + 500f;
             float randomZPos = Random.Range(minZPos, maxZPos);
             newCoins[i].transform.localPosition = new Vector3(transform.position.x, transform.position.y, randomZPos);
             newCoins[i].SetActive(true);
             newCoins[i].GetComponent<ChangeLane>().PositionLane();
             minZPos = randomZPos + 1;
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {

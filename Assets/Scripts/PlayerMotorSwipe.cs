@@ -122,7 +122,7 @@ public class PlayerMotorSwipe : MonoBehaviour
         {
 //            Debug.Log("colisao");
             currentLife--;
-            Debug.Log(currentLife);
+            /*Debug.Log(currentLife);*/
             uiManager.UpdateLives(currentLife);
             speed = 0;
 
