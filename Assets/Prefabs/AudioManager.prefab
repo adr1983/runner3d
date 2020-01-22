@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7505731908411843128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7505731908411843130}
+  - component: {fileID: 7505731908411843131}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7505731908411843130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7505731908411843128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7505731908411843131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7505731908411843128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f40af4b6a8311aabb5f1b8d861fa08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 0487c1954271fa05ea7fb9fdbd06ea3d, type: 3}
+    volume: 0.39
+    pitch: 1
+    loop: 0
+    output: {fileID: 24100000, guid: 2d6631525fd211279861fc6a212bf658, type: 2}
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 43c8fdc3739881e6a9869a008d5d496f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    output: {fileID: 24100000, guid: 2d6631525fd211279861fc6a212bf658, type: 2}
+    source: {fileID: 0}
+  - name: BackButton
+    clip: {fileID: 8300000, guid: 37d19ced6076e5835ac629bf6f56478d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    output: {fileID: 24100000, guid: 2d6631525fd211279861fc6a212bf658, type: 2}
+    source: {fileID: 0}
+  - name: oldscore
+    clip: {fileID: 8300000, guid: 37d19ced6076e5835ac629bf6f56478d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    output: {fileID: 24100000, guid: 2d6631525fd211279861fc6a212bf658, type: 2}
+    source: {fileID: 0}
