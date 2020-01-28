@@ -43,8 +43,8 @@ public class Track : MonoBehaviour
     {
         for (int i = 0; i < newObstacles.Count; i++)
         {
-            float posZMin = (500f / newObstacles.Count) + (500f / newObstacles.Count) * i;
-            float posZMax = (500f / newObstacles.Count) + (500f / newObstacles.Count) * i + 1;
+            float posZMin = (3100f / newObstacles.Count) + (3100f / newObstacles.Count) * i;
+            float posZMax = (3100f / newObstacles.Count) + (3100f / newObstacles.Count) * i + 1;
             newObstacles[i].transform.localPosition = new Vector3(0, 1, Random.Range(posZMin, posZMax));
             newObstacles[i].SetActive(true);
             if (newObstacles[i].GetComponent<ChangeLane>() != null)
@@ -56,8 +56,8 @@ public class Track : MonoBehaviour
     {
         for (int i = 0; i < newCoins.Count; i++)
         {
-            float posZMin = (500f / newCoins.Count) + (500f / newCoins.Count) * i;
-            float posZMax = (500f / newCoins.Count) + (500f / newCoins.Count) * i + 1;
+            float posZMin = (310f / newCoins.Count) + (310f / newCoins.Count) * i;
+            float posZMax = (310f / newCoins.Count) + (310f / newCoins.Count) * i + 1;
             newCoins[i].transform.localPosition = new Vector3(0, 1, Random.Range(posZMin, posZMax));
             newCoins[i].SetActive(true);
             if (newCoins[i].GetComponent<ChangeLane>() != null)
@@ -85,7 +85,7 @@ public class Track : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerMotorSwipe>().IncreaseSpeed();
-            transform.position = new Vector3(0, 0, transform.position.z + 500 * 2);
+            transform.position = new Vector3(0, 0, transform.position.z + 310 * 2);
             PositionateObstacles();
             PositionateCoins();
         }
